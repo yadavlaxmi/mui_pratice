@@ -6,15 +6,20 @@ function App() {
     const[color,setColor]=useState("primary")
   
 function customeMe(){
-    alert("fuction called")
-  }
+    setColor("secondary")
+}
   return (
     <>
-    <Button variant="outlined" color={color} disabled onClick={()=>{customeMe()}}>click me</Button>
+    <Button 
+    variant="outlined" 
+    color={color} 
+    onClick={()=>{customeMe()}}>
+    click me</Button>
     
 
     </>
   );
+
 }
 
 export default App;
