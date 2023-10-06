@@ -1,15 +1,16 @@
-import React from "react";
+import React,{useState} from "react";
 import './App.css';
 import {Button} from "@material-ui/core"
 
 function App() {
+    const[color,setColor]=useState("primary")
   
-const customeMe=()=>{
+function customeMe(){
     alert("fuction called")
   }
   return (
     <>
-    <Button variant="contained" color="primary" onClick={()=>{customeMe()}}>click me</Button>
+    <Button variant="outlined" color={color} disabled onClick={()=>{customeMe()}}>click me</Button>
     
 
     </>
