@@ -3,11 +3,14 @@ import './App.css';
 import {Button} from "@material-ui/core"
 
 function App() {
+  
+const customeMe=()=>{
+    alert("fuction called")
+  }
   return (
     <>
-    <Button variant="contained" color="primary" onClick={()=>alert("laxmi")}>my name laxmi</Button>
-    <Button variant="outlined" color="secondary">my name </Button>
-    <Button variant="contained" color="default">my </Button>
+    <Button variant="contained" color="primary" onClick={()=>{customeMe()}}>click me</Button>
+    
 
     </>
   );
