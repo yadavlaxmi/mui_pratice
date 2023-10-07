@@ -1,30 +1,24 @@
 import React, { useState } from "react";
 import "./App.css";
-import{Favorite} from "@material-ui/icons";
-import{FavoriteBorder} from "@material-ui/icons";
-
-import Checkbox from "@material-ui/core/Checkbox";
+import{Radio} from "@material-ui/core";
 function App(){
-   const[name, setName]=useState([])
-  function getValue(e)
-  {
-    let data=name;
-    data.push(e.target.value)
-    console.warn(data)
-  }
+    const testfunction=()=>{
+      alert("gender")
 
+    }
   return (
     <>
-      <h1> my checkbox</h1>
-      <Checkbox color="primary" value="laxmi"onChange={(e)=>{getValue(e)}}/>
-      <Checkbox color="secondary" value="Mansa"onChange={(e)=>{getValue(e)}}/>
-      <Checkbox color="default" value="guddi"onChange={(e)=>{getValue(e)}}/>
-      <Checkbox color="primary" value="xyz" indeterminate onChange={(e)=>{getValue(e)}}/>
-      <Checkbox color="secondary"
-       value="xyz"  onChange={(e)=>{getValue(e)}} 
-       icon={<FavoriteBorder/>}
-       checkedIcon={<Favorite/>}/>
+      <h1> React Material UI Radio Button </h1>
+      <div>
+        <Radio color="primary" value="Male"
+        onChange={(testfunction)} />
+        <span> Male </span>
+      </div>
+      <div>
+        <Radio color="secondary" value="Female"/>
+        <span> Female </span>
 
+      </div>
     </>
   );
   }
