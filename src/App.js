@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
-import { ButtonGroup,Button } from "@material-ui/core";
+import Checkbox from "@material-ui/core/Checkbox"
 function App(){
+  function getValue(e)
+  {
+    console.warn(e.target.value)
+  }
+
   return (
     <>
-      <ButtonGroup orientation="vertical" variant="outlined" color="primary">
-      <Button>one</Button>
-      <Button>two</Button>
-      <Button>three</Button>
-      </ButtonGroup>
+      <h1> my checkbox</h1>
+      <Checkbox color="primary" value="laxmi"onChange={(e)=>{getValue(e)}}/>
     </>
   );
   }
