@@ -1,39 +1,41 @@
 import React, { useState } from "react";
 import "./App.css";
-import{Radio} from "@material-ui/core";
+import {Slider} from "@material-ui/core"
 function App(){
-  const[gender,setGender]=useState("male")
-    const testfunction=(e)=>{
-      console.warn(e.target.value)
-      setGender(e.target.value)
+          const mark=[{
+            value:0,
+            label:"start"
+          },
+          {
+            value:100,
+            label:"middle"
 
-    }
+          },
+          {
+
+            value:30,
+            label:"at 30"
+          },
+          {
+
+            value:200,
+            label:"end"
+          }
+        ]
+            
   return (
-    <>
-      <h1> React Material UI Radio Button </h1>
-      <div>
-        <Radio color="primary" value="male"
-        checked={gender==="male"}
-        onChange={(testfunction)} />
-        <span> Male </span>
+    <div className="App">
+    <h1> Slider</h1>
+    <div style={{width:300,margin:40}}>
+      <Slider color="primary" 
+      defaultValue={100} 
+      max={200} 
+      step={10}
+       marks={mark}
+      />
       </div>
-      <div>
-        <Radio color="secondary" 
-        value="female" checked={gender==="female"}
-
-        onChange={(testfunction)}/>
-        <span> Female </span>
-
-      </div>
-      <div>
-        <Radio color="default" 
-        value="other" checked={gender==="other"}
-
-        onChange={(testfunction)}/>
-        <span> other </span>
-
-      </div>
-    </>
+    
+    </div>
   );
   }
 
