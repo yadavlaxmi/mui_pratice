@@ -1,26 +1,49 @@
 import React, { useState } from "react";
 import "./App.css";
-import {Select,MenuItem} from "@material-ui/core"
+import {TextField} from "@material-ui/core"
 function App(){
-    const[course,setCourse]=React.useState("")
-    const updateValue=(e,val)=>{
-            console.warn(e.target.value)
-            setCourse(e.target.value)
-    }
+    
   return (
     <div className="App">
-    <h1> React material UI select box or select</h1>
-    <Select 
-    value={course} 
-    displayEmpty 
-    onChange={updateValue}>
-        <MenuItem value="">Select Course</MenuItem>
-        <MenuItem value={1}>React</MenuItem>
-        <MenuItem value={2}>Node</MenuItem>
-        <MenuItem value={3}>Javascript</MenuItem>
-        <MenuItem value={4}>python</MenuItem>
-    </Select>
+    <h1> React material UI Text Field</h1>
+    <TextField
+    label="enter name"
+    color="secondary"
+    variant="outlined"
+    type=""/><br></br><br></br>
+    <TextField
+    label="enter father name"
+    color="secondary"
+    variant="outlined"
+    type=""/><br></br><br></br>
+    <TextField
+    label="enter mother name"
+    color="secondary"
+    variant="outlined"
+    type=""/><br></br><br></br>
+    <TextField
+    label="enter school name"
+    color="secondary"
+    variant="outlined"
+    type=""/><br></br><br></br>
+    <TextField
+    label="enter age"
+    color="secondary"
+    variant="outlined"
+    type="number"/><br></br><br></br>
+     <TextField
+    label="password"
+    color="secondary"
+    variant="outlined"
+    type="password"/><br></br><br></br>
+   
+   <TextField
+    label="phone number"
+    color="secondary"
+    variant="outlined"
+    type=""/><br></br><br></br>
     
+   
   
     
     </div>
