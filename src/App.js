@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./App.css";
 import {TextField} from "@material-ui/core"
 function App(){
+  const getData=(e)=>{
+    console.warn(e.target.value)
+  }
     
   return (
     <div className="App">
@@ -10,7 +13,7 @@ function App(){
     label="enter name"
     color="secondary"
     variant="outlined"
-    type=""/><br></br><br></br>
+    onChange={getData}/><br></br><br></br>
     <TextField
     label="enter father name"
     color="secondary"
