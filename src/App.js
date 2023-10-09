@@ -1,16 +1,27 @@
 import React, { useState } from "react";
 import "./App.css";
-import {Box,Button} from "@material-ui/core"
+import {Container} from "@material-ui/core"
 function App(){
 
   
     
   return (
-    <div className="App">
-    <h1> React material UI Box</h1>
-    <Box component="span" style={{color:"red"}}m={1000} p={20} clone>
-    <Button> hello</Button>
-    </Box>
+    <div>
+    <Container  style={{backgroundColor:"skyblue"}} maxWidth="lg">  
+    <h1>  React material UI container layout</h1>
+    </Container>
+    <Container  style={{backgroundColor:"skyblue"}} maxWidth="md">  
+    <h1>  React material UI container layout</h1>
+    </Container>
+    <Container  style={{backgroundColor:"skyblue"}} maxWidth="sm">  
+    <h1>  React material UI container layout</h1>
+    </Container>
+    <Container  style={{backgroundColor:"skyblue"}} maxWidth="xs">  
+    <h1>  React material UI container layout</h1>
+    </Container>
+    <Container fixed style={{backgroundColor:"skyblue"}}>  
+    <h1>  React material UI container layout</h1>
+    </Container>
    
     
     
