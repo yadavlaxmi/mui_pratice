@@ -1,21 +1,25 @@
 import React, { useState } from "react";
 import "./App.css";
-import {Slider} from "@material-ui/core"
+import {Select,MenuItem} from "@material-ui/core"
 function App(){
-    const[val,setVal]=useState([40,100])
-     const updateVal=(e,item)=>{
-      setVal(item)
-     }
+    const[course,setCourse]=React.useState("")
+    const updateValue=(e,val)=>{
+            console.warn(e.target.value)
+            setCourse(e.target.value)
+    }
   return (
     <div className="App">
-    <h1> Slider</h1>
-    <div style={{width:300,margin:30}}> 
-    <Slider value={val}
-    max={200}
-    step={10}
-    onChange={updateVal}
-    valueLabelDisplay="auto"/>
-    </div>
+    <h1> React material UI select box or select</h1>
+    <Select 
+    value={course} 
+    displayEmpty 
+    onChange={updateValue}>
+        <MenuItem value="">Select Course</MenuItem>
+        <MenuItem value={1}>React</MenuItem>
+        <MenuItem value={2}>Node</MenuItem>
+        <MenuItem value={3}>Javascript</MenuItem>
+        <MenuItem value={4}>python</MenuItem>
+    </Select>
     
   
     
