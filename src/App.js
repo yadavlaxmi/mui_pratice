@@ -1,50 +1,18 @@
 import React, { useState } from "react";
 import "./App.css";
-import {TextField} from "@material-ui/core"
+import {Box,Button} from "@material-ui/core"
 function App(){
-  const getData=(e)=>{
-    console.warn(e.target.value)
-  }
+
+  
     
   return (
     <div className="App">
-    <h1> React material UI Text Field</h1>
-    <TextField
-    label="enter name"
-    color="secondary"
-    variant="outlined"
-    onChange={getData}/><br></br><br></br>
-    <TextField
-    label="enter father name"
-    color="secondary"
-    variant="outlined"
-    type=""/><br></br><br></br>
-    <TextField
-    label="enter mother name"
-    color="secondary"
-    variant="outlined"
-    type=""/><br></br><br></br>
-    <TextField
-    label="enter school name"
-    color="secondary"
-    variant="outlined"
-    type=""/><br></br><br></br>
-    <TextField
-    label="enter age"
-    color="secondary"
-    variant="outlined"
-    type="number"/><br></br><br></br>
-     <TextField
-    label="password"
-    color="secondary"
-    variant="outlined"
-    type="password"/><br></br><br></br>
+    <h1> React material UI Box</h1>
+    <Box component="span" style={{color:"red"}}m={1000} p={20} clone>
+    <Button> hello</Button>
+    </Box>
    
-   <TextField
-    label="phone number"
-    color="secondary"
-    variant="outlined"
-    type=""/><br></br><br></br>
+    
     
    
   
