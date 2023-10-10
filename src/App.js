@@ -1,18 +1,29 @@
 import React, { useState } from "react";
 import "./App.css";
-import {Grid,Hidden} from "@material-ui/core"
+import {Tab,Tabs,AppBar} from "@material-ui/core"
 function App(){
-
+  const handleTabs=(e,val)=>{
+    console.warn(val)
+  }
   
     
   return (
-   <Grid  container spacing={2} xs={12}>
-    <Grid item lg={3}  sm={6} xs={12}><h1 style={{backgroundColor:"green"}}>BLOCK 1</h1></Grid>
-    <Grid item lg={3} sm={6} xs={12}><h1 style={{backgroundColor:"green"}}>BLOCK 2</h1></Grid>
-    <Hidden only="sm"><h1 style={{backgroundColor:"green",flex:1}}>BLOCK3</h1></Hidden>
-    <Grid item lg={3} sm={6} xs={12}><h1 style={{backgroundColor:"green"}}>BLOCK4</h1></Grid>
+    <div>
+      <h1> React material ui</h1>
+      <AppBar position="static">
+        <Tabs onChange={handleTabs}>
+          <Tab label="item 1"/>
+          <Tab label="item 2"/>
+          <Tab label="item 3"/>
+          <Tab label="item 4"/>
+        
+          
+          
 
-   </Grid>
+        </Tabs>
+      </AppBar>
+    </div>
+  
   );
   } 
 
